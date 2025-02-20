@@ -1,0 +1,11 @@
+{
+  "name": "mustang-gt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch sass/:public/css/"
+  },
+  "author": "Prins",
+  "license": "ISC"
+}

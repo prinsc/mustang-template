@@ -1,0 +1,159 @@
+/*
+    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Righteous', cursive;
+*/
+
+.img-dark {
+  display: none;
+  @include vendor-prefix('filter', 'saturate(120%)');
+}
+/* START OF GLOBAL STYLE */
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color-lime-light);
+  background: var(--secondary-color);
+}
+
+::selection {
+  color: var(--color-lime-light);
+  background: var(--secondary-color);
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 100;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: 'Rubik', sans-serif;
+}
+
+h5 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
+  opacity: .8;
+  padding-bottom: 15px;
+  border-bottom: solid 1px rgba(127, 127, 127, .2);
+}
+
+a {
+  transition: all .2s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--sprimary-color) !important;
+    text-decoration: none !important;
+    transition: all .2s ease;
+    @include vendor-prefix('cursor', 'pointer');
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.content {
+  @include vendor-prefix('display', 'flex');
+  flex-direction: column;
+  height: inherit;
+
+  .row {
+    display: inherit;
+    justify-content: space-evenly;
+    height: inherit;
+
+    .col {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.white-space {
+  white-space: nowrap;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.max-height {
+  height: 100% !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+div.line {
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  @include vendor-prefix('display', 'flex');
+
+  span {
+    height: 20px;
+    margin: 4px 0;
+    background-color: var(--primary-color);
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-color: var(--secondary-color);
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
+      z-index: 2;
+    }
+  }
+}
+
+b {
+  color: var(--primary-color-dark);
+  font-weight: bold;
+  cursor: inherit
+}
+
+/* END OF GLOBAL STYLE */
+
+/* ==========================================
+ANIMATION
+========================================== */
+@import "_animation";
+
+/* ==========================================
+VERSION PC
+========================================== */
+@import "screens/_desktop";
+
+
+/* ==========================================
+VERSION TABLETTE
+========================================== */
+@media screen and (max-width: $desktop) {
+  @import "screens/_tablette";
+  .slide {
+    &:not(.in-top) {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* ==========================================
+VERSION MOBILE
+========================================== */
+@media screen and (max-width: $tablet-mid) {
+  @import "screens/_mobile";
+}

@@ -1,0 +1,56 @@
+:root {
+
+  --color-red: #fa4747;
+  --color-red-dark: #a31313;
+  --color-red-light: #ff7373;
+
+  --color-lime: #85e625;
+  --color-lime-dark: #40c925;
+  --color-lime-light: #95db4e;
+
+  --color-aqua: #1298FF;
+  --color-aqua-dark: #0B5A97;
+  --color-aqua-light: #34a0f3;
+
+  --color-yellow: #fffb12;
+  --color-yellow-dark: #ddbb23;
+  --color-yellow-light: #fffc5b;
+
+  --color-pink: #fc5dfc;
+  --color-pink-dark: #a340a3;
+  --color-pink-light: #ed93ff;
+
+  --color-orange: #ff9900;
+  --color-orange-dark: #bd7100;
+  --color-orange-light: #ffb657;
+
+  --color-grey: #7a7a7a;
+  --color-grey-light: #dddddd;
+  --color-grey-dark: #3a3a3a;
+
+  --color-white: #fcfcfc;
+  --color-light: #ffffff;
+
+  --color-black: #030303;
+  --color-dark: #1d1d1d;
+
+  --primary-color: var(--color-lime);
+  --primary-color-dark: var(--color-lime-dark);
+  --sprimary-color: var(--color-lime-light);
+
+  --secondary-color: var(--color-dark);
+  --secondary-color-dark: var(--color-dark);
+}
+
+// Screen size
+
+$phone:        400px;
+$phone-wide:   480px;
+$phablet:      560px;
+$tablet-small: 640px;
+$tablet:       768px;
+$tablet-mid:   840px;
+$tablet-wide:  1024px;
+$desktop:      1248px;
+$desktop-wide: 1440px;
+$QHDTV:        2720px; // Quad HDTV
