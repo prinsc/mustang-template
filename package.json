@@ -6,6 +6,6 @@
   "scripts": {
     "sass": "sass --watch sass/:public/css/"
   },
-  "author": "Prins",
+  "author": "Klyuvitkin Eléazar",
   "license": "ISC"
 }
